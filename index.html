@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyass Hesham Mashaqi - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Configuration -->
+    <script src="config.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Eyass Hesham Mashaqi</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="text-gradient">Eyass Hesham</span>
+                        <br>Mashaqi
+                    </h1>
+                    <p class="hero-subtitle">Software Engineer & Full-Stack Developer</p>
+                    <p class="hero-description">
+                        Computer Science student passionate about creating innovative solutions 
+                        with modern web technologies and mobile applications.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/eyass-mashaqi/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/EyassMashaqi" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:eyasshmashaqi@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <div class="profile-image-wrapper">
+                            <img src="assets/eyas.jpg" alt="Eyass Hesham Mashaqi" class="profile-image">
+                            <div class="profile-ring"></div>
+                            <div class="profile-glow"></div>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-code"></i>
+                            <span>Full-Stack</span>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Dev</span>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-database"></i>
+                            <span>Database</span>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-brain"></i>
+                            <span>AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a dedicated Computer Science student at Birzeit University with a passion for 
+                        software development. Currently working as a Software Engineer at Jafra.Net, 
+                        I specialize in full-stack development using modern technologies.
+                    </p>
+                    <p>
+                        My journey includes developing innovative solutions like checkpoint status detection 
+                        systems, visit management platforms, and AI-powered resume ranking tools. I'm 
+                        constantly learning and exploring new technologies to create impactful software.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-education">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>Bachelor of Computer Science</h4>
+                            <p>Birzeit University</p>
+                            <span class="education-date">2020 - Feb 2025</span>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>Front-End Developer Nano Degree</h4>
+                            <p>Udacity</p>
+                            <span class="education-date">2024 - Jan 2025</span>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>User Experience Nano Degree</h4>
+                            <p>Udacity</p>
+                            <span class="education-date">2025 - May 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">My technical expertise</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">HTML</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Frameworks</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">FastAPI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <a href="https://github.com/yousef-isaifan/Tariqi-Navigation" target="_blank" class="project-card-link">
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="assets/Tariqi_Navigation.png" alt="Checkpoint Status Detection System" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <div class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
+                                    <div class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-date">Sep 2024 - Jan 2025</span>
+                            <h3 class="project-title">Checkpoint Status Detection System</h3>
+                            <p class="project-description">
+                                A comprehensive mobile application that monitors and displays checkpoint statuses 
+                                in real-time using live data from Telegram groups, integrated with GPT-4o Mini 
+                                for intelligent message analysis.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">GPT-4o</span>
+                                <span class="tech-tag">Telegram API</span>
+                                <span class="tech-tag">Angular</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/elianaellati/VisitManagement_MobileApp_Bisan" target="_blank" class="project-card-link">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="assets/visit.png" alt="Visit Management System" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <div class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
+                                    <div class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-date">Jul 2023 - Sep 2023</span>
+                            <h3 class="project-title">Visit Management System</h3>
+                            <p class="project-description">
+                                A streamlined system for managing employee visit assignments with a Flutter 
+                                mobile app and Angular admin panel, featuring robust backend with Spring Boot.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/EyassMashaqi/Khaled-Charitable-Society-Project" target="_blank" class="project-card-link">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="assets/Khaled.png" alt="Khaled Charitable Society" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <div class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
+                                    <div class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-date">Aug 2024 - Sep 2024</span>
+                            <h3 class="project-title">Khaled Charitable Society</h3>
+                            <p class="project-description">
+                                A clean and user-friendly static website designed for a charitable organization 
+                                using HTML and CSS, focusing on highlighting mission and activities.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/EyassMashaqi/Team11_-PLWG-C4-hackathon" target="_blank" class="project-card-link">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="assets/ai.png" alt="AI Resume Ranking System" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <div class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
+                                    <div class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-date">Jun 2025</span>
+                            <h3 class="project-title">AI Resume Ranking System</h3>
+                            <p class="project-description">
+                                An intelligent web tool that helps recruiters rank resumes based on job 
+                                descriptions using BERT for content comparison and AI-powered matching algorithms.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">BERT</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">My career journey</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer</h3>
+                            <span class="company">Jaffa.Net</span>
+                            <span class="duration">April 6, 2025 - Present</span>
+                        </div>
+                        <div class="timeline-description">
+                            <p>Currently working as a Software Engineer, developing and maintaining web applications 
+                            and software solutions using modern technologies and best practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineering Intern</h3>
+                            <span class="company">Bisan Systems Ltd</span>
+                            <span class="duration">July 31 - September 21</span>
+                        </div>
+                        <div class="timeline-description">
+                            <p>Completed the Visit Management System project, including a mobile app using Flutter, 
+                            an admin panel with Angular, and a web server built with Spring Boot. Gained hands-on 
+                            experience in full-stack development and project deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                            <div class="certifications">
+                <h3>Certifications</h3>
+                <div class="cert-grid">
+                    <a href="https://drive.google.com/file/d/1-VTx8qCXV9dqtk-9c6R-axKsYm_uhODl/view" target="_blank" class="cert-card-link">
+                        <div class="cert-card">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Internship Completion Certificate</h4>
+                            <p>Bisan Systems Ltd, Ramallah</p>
+                            <span>Successfully completed internship and contributed to the Visit Management System project</span>
+                        </div>
+                    </a>
+                    <a href="https://www.udacity.com/certificate/e/02125bfc-89a0-11ef-af0e-0feb3da5727f" target="_blank" class="cert-card-link">
+                        <div class="cert-card">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Front End Nano Degree Certificate</h4>
+                            <p>Udacity</p>
+                            <span>Expertise in HTML, CSS, JavaScript, and modern front-end frameworks</span>
+                        </div>
+                    </a>
+                    <a href="https://www.udacity.com/certificate/e/71762158-edf1-11ef-be13-83fc23524e2b" target="_blank" class="cert-card-link">
+                        <div class="cert-card">
+                            <i class="fas fa-certificate"></i>
+                            <h4>User Experience Nano Degree</h4>
+                            <p>Udacity</p>
+                            <span>Expertise in UX design principles, user research, and prototyping</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>eyasshmashaqi@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>0599671120</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Ramallah - AL Masyoon</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Eyass Hesham Mashaqi. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/eyass-mashaqi/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/EyassMashaqi" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:eyasshmashaqi@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
