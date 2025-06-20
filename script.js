@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         type();
     }
 
-    // Initialize typing animation
+    // Initialize typing animation for title
     setTimeout(() => {
         const heroTitle = document.querySelector('.hero-title');
         if (heroTitle) {
@@ -205,6 +205,74 @@ document.addEventListener('DOMContentLoaded', function() {
             typeWriter(heroTitle, originalText, 80);
         }
     }, 1000);
+
+    // Hacker-style typing animation for subtitle
+    const typingTexts = [
+        'Software Engineer',
+        'Full-Stack Developer', 
+        'Java Developer',
+        'JavaScript Developer',
+        'Python Developer',
+        'Angular Developer',
+        'Flutter Developer',
+        'Spring Boot Expert',
+        'Database Designer',
+        'AI/ML Enthusiast',
+        'Mobile App Developer',
+        'Web Developer',
+        'Backend Developer',
+        'Frontend Developer'
+    ];
+
+    function hackerTypeEffect() {
+        const typingElement = document.getElementById('typing-text');
+        let currentIndex = 0;
+        
+        function typeText(text, callback) {
+            let charIndex = 0;
+            typingElement.textContent = '';
+            
+            function addChar() {
+                if (charIndex < text.length) {
+                    typingElement.textContent += text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(addChar, 50 + Math.random() * 50); // Random typing speed
+                } else {
+                    setTimeout(callback, 2000); // Wait 2 seconds before next text
+                }
+            }
+            addChar();
+        }
+        
+        function deleteText(callback) {
+            const currentText = typingElement.textContent;
+            
+            function removeChar() {
+                if (typingElement.textContent.length > 0) {
+                    typingElement.textContent = typingElement.textContent.slice(0, -1);
+                    setTimeout(removeChar, 30 + Math.random() * 30); // Random delete speed
+                } else {
+                    setTimeout(callback, 300); // Short pause before typing next
+                }
+            }
+            removeChar();
+        }
+        
+        function cycle() {
+            typeText(typingTexts[currentIndex], () => {
+                deleteText(() => {
+                    currentIndex = (currentIndex + 1) % typingTexts.length;
+                    cycle();
+                });
+            });
+        }
+        
+        // Start the cycle after initial delay
+        setTimeout(cycle, 2000);
+    }
+
+    // Initialize hacker typing effect
+    hackerTypeEffect();
 
     // Parallax effect for hero section
     window.addEventListener('scroll', function() {

@@ -150,6 +150,34 @@ body {
         radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 40% 80%, rgba(244, 63, 94, 0.3) 0%, transparent 50%);
     pointer-events: none;
+    animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(244, 63, 94, 0.3) 0%, transparent 50%);
+    }
+    25% {
+        background: 
+            radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.4) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.4) 0%, transparent 50%),
+            radial-gradient(circle at 20% 50%, rgba(244, 63, 94, 0.4) 0%, transparent 50%);
+    }
+    50% {
+        background: 
+            radial-gradient(circle at 40% 80%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(244, 63, 94, 0.3) 0%, transparent 50%);
+    }
+    75% {
+        background: 
+            radial-gradient(circle at 60% 30%, rgba(99, 102, 241, 0.4) 0%, transparent 50%),
+            radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.4) 0%, transparent 50%),
+            radial-gradient(circle at 70% 60%, rgba(244, 63, 94, 0.4) 0%, transparent 50%);
+    }
 }
 
 .hero-container {
@@ -186,6 +214,34 @@ body {
     color: var(--secondary-color);
     margin-bottom: 1rem;
     font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    min-height: 2rem;
+}
+
+.typing-prefix {
+    color: var(--text-secondary);
+}
+
+.typing-text {
+    color: var(--primary-color);
+    font-weight: 700;
+    min-width: 200px;
+    position: relative;
+}
+
+.typing-cursor {
+    color: var(--primary-color);
+    animation: blink 1s infinite;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 .hero-description {
@@ -1053,6 +1109,19 @@ section::before {
 
     .hero-buttons {
         justify-content: center;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .typing-text {
+        min-width: 150px;
+        text-align: center;
     }
 
     .profile-container {
