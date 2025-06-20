@@ -94,13 +94,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll animations
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -100px 0px'
     };
 
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in-up');
+                entry.target.classList.add('loaded');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
                 
                 // Animate stats counters
                 if (entry.target.classList.contains('stat-number')) {
@@ -119,6 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll('.project-card, .skill-category, .timeline-item, .cert-card, .education-item, .stat');
     animatedElements.forEach(el => {
         el.classList.add('loading');
+        // Set initial visible state to prevent hiding
+        el.style.opacity = '0.3';
+        el.style.transform = 'translateY(20px)';
         observer.observe(el);
     });
 
@@ -482,12 +488,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
 
     revealElements.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'all 0.8s ease';
+        // Don't hide sections completely, just make them slightly transparent
+        section.style.opacity = '0.7';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'all 0.6s ease';
         revealObserver.observe(section);
     });
 
